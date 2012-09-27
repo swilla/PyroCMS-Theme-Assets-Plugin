@@ -21,7 +21,3 @@ Files are located inside of THEMEDIRECTORY/css
 ```javascript
 {{ theme_assets:css_files files="file1.css,file2.css" }}
 ```
-
-### Note
-
-Currently this does not support files inside sub-directories within the js or css directory.
