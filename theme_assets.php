@@ -11,9 +11,9 @@ class Plugin_Theme_Assets extends Plugin {
 	{
 		$files = $this -> attribute('files');
 	
-		preg_match_all('/[\w-\.]+\.js/i', $files, $files_a);
-	
-		foreach ($files_a[0] as $file)
+		$files_a = explode(",", $files);
+
+		foreach ($files_a as $file)
 		{
 			Asset::js($file);
 		}
@@ -25,9 +25,9 @@ class Plugin_Theme_Assets extends Plugin {
 	{
 		$files = $this -> attribute('files');
 	
-		preg_match_all('/[\w-\.]+\.css/i', $files, $files_a);
-	
-		foreach ($files_a[0] as $file)
+		$files_a = explode(",", $files);
+
+		foreach ($files_a as $file)
 		{
 			Asset::css($file);
 		}
